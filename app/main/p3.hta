@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=9">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Starter Windows- dodatkowe opcje</title>
+   <link rel="stylesheet" href="../scripts/style.css">
+   <HTA:APPLICATION ICON="icons/main.ico" navigable="yes" MAXIMIZEBUTTON="NO" BORDER="DIALOG" contextmenu="no">
+</head>
+
+<body>
+   <div id="dialog_bkg"></div>
+   <script src="../scripts/jquery.min.js"></script>
+   <script src='../scripts/jquery.corner.js'></script>
+   <script>
+      window.resizeTo(370, 500);
+      window.moveTo((screen.width - 370) / 2, (screen.height - 500) / 2);
+
+      window.onerror = function () {
+         return true
+      } 
+
+   </script>
+
+
+
+<div class="header">
+   <a class="return" onclick="location.href = 'main.hta';"><p>&#128072; Wróć do menu głównego...</a>
+</div>
+
+
+<div class="section1">
+    <h3>Dodatkowe opcje i narzędzia</h3>
+        <p style="text-align:justify; padding: 0px 30px;">Wybierz dodatek porpzez kliknięcie odpowiedniego przycisku poniżej, który chciałbyś ręcznie zastosować w systemie.</p>
+    <hr>
+    <div class="button" id="runsft_318"><p><img class="icon" src="../icons/key.png">&nbsp;Aktywuj system Windows</p></div>
+    <div class="button" id="runsft_301"><p><img class="icon" src="../icons/cmp.ico">&nbsp;Kompresuj pliki aktualizacji</p></div>
+    <div class="button" id="runsft_302"><p><img class="icon" src="../icons/cmp.ico">&nbsp;Kompresuj pliki systemu</p></div>
+    <div class="button" id="runsft_303"><p><img class="icon" src="../icons/ram.ico">&nbsp;Oczyść pamięć RAM</p></div>
+    <div class="button" id="runsft_304"><p><img class="icon" src="../icons/wu.png">&nbsp;Oczyść Windows Update</p></div>
+    <div class="button" id="runsft_305"><p><img class="icon" src="../icons/ul.png">&nbsp;Odblokuj zablokowany plik</p></div>
+    <div class="button" id="runsft_306"><p><img class="icon" src="../icons/yes.png">&nbsp;Optymalizuj system pod SSD</p></div>
+    <div class="button" id="runsft_307"><p><img class="icon" src="../icons/cfg.ico">&nbsp;Włącz plik hibernacji</p></div>
+    <div class="button" id="runsft_308"><p><img class="icon" src="../icons/cfg.ico">&nbsp;Włącz plik wymiany</p></div>
+    <div class="button" id="runsft_309"><p><img class="icon" src="../icons/pt.png">&nbsp;Włącz przeglądarkę zdjęć</p></div>
+    <div class="button" id="runsft_310"><p><img class="icon" src="../icons/del.ico">&nbsp;Wyłącz plik hibernacji</p></div>
+    <div class="button" id="runsft_311"><p><img class="icon" src="../icons/del.ico">&nbsp;Wyłącz plik wymiany</p></div>
+    <div class="button" id="runsft_312"><p><img class="icon" src="../icons/wd.png">&nbsp;Wyłącz Windows Defender</p></div>
+    <div class="button" id="runsft_313"><p><img class="icon" src="../icons/wu.png">&nbsp;Wyłącz Windows Update</p></div>
+    <div class="button" id="runsft_314"><p><img class="icon" src="../icons/bl.png">&nbsp;Zablokuj telemetrię</p></div>
+    <div class="button" id="runsft_315"><p><img class="icon" src="../icons/wf.png">&nbsp;Zarządzaj regułami zapory</p></div>
+    <div class="button" id="runsft_316"><p><img class="icon" src="../icons/net.png">&nbsp;Zarządzaj serwerami DNS</p></div>
+    <div class="button" id="runsft_317"><p><img class="icon" src="../icons/mk.png">&nbsp;Zarządzaj menu kontekst.</p></div>
+
+
+
+    <div class="button" id="runsft_319"><p><img class="icon" src="../icons/wd.png">&nbsp;Wzmocnij Windows Defender</p></div>
+    <div class="button" id="runsft_320"><p><img class="icon" src="../icons/wf.png">&nbsp;Wzmocnij ustawienia zapory</p></div>
+    <div class="button" id="runsft_321"><p><img class="icon" src="../icons/sc.png">&nbsp;Blokuj exploity.</p></div>
+    <div class="button" id="runsft_322"><p><img class="icon" src="../icons/sc.png">&nbsp;Wzmocnij ochronę systemu</p></div>
+
+
+</div>
+<br><br>
+
+<script>
+   $("#runsft_301").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\12\\compress.exe");
+    });
+
+    $("#runsft_302").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\11\\compact.exe");
+    });
+
+    $("#runsft_303").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\21\\rm.exe");
+    });
+
+    $("#runsft_304").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\15\\wu.exe");
+    });
+
+    $("#runsft_305").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\23\\Unlocker.exe");
+    });
+
+    $("#runsft_306").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\14\\SSD.reg");
+    });
+
+    $("#runsft_307").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\17\\hiberfil_d.exe");
+    });
+
+    $("#runsft_308").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\18\\swapfile_enable.reg");
+    });
+
+    $("#runsft_309").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\16\\cpr.reg");
+    });
+
+    $("#runsft_310").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\17\\hiberfil.exe");
+    });
+
+    $("#runsft_311").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\18\\swapfile_disable.reg");
+    });
+
+    $("#runsft_312").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\24\\dfControl.exe");
+    });
+
+    $("#runsft_313").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\22\\Wub.exe");
+    });
+
+    $("#runsft_314").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\10\\OOSU10.exe");
+    });
+
+    $("#runsft_315").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\19\\Fab.exe");
+    });
+
+    $("#runsft_316").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\20\\dns.exe");
+    });
+
+   $("#runsft_317").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\13\\EcMenu\\EcMenu_x64.exe");
+    });
+
+    $("#runsft_318").click(function () {
+      $('.warning_bkg').show();
+      $('.warning_dialog').show();
+    });
+
+    $("#runsft_319").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\27\\cd.exe");
+    });
+
+    $("#runsft_320").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\27\\fh.exe");
+    });
+
+    $("#runsft_321").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\27\\da.exe");
+    });
+
+    $("#runsft_322").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\27\\sh.exe");
+    });
+</script>
+
+<div class="warning_bkg">
+   <div class="warning_dialog">
+      <p><b>Ważna uwaga!</b></p>
+      <fieldset>
+         <p>Zamierzasz wykonać czynność, która łamie ogólne zasady moralności, gdyż jest ona nielegalna. Zgodnie z większością interpretacji międzynarodowego prawa autorskiego, prawa są zachowywane przez oryginalnego wydawcę lub licencjonowanego dystrybutora, zaś aktywacja programu komputerowego powinna odbyć się w sposób legalny za pomocą prawidłowego klucza licencyjnego nabytego w sklepie producenta, potwierdzającego oryginalność produktu.</p>
+
+         Czy na pewno chcesz aktywować system w nielegalny sposób? W kolejnym ekranie wpisz hasło- "<b>win10</b>", by móc kontynuować proces. Kliknij przycisk "<b>Anuluj</b>", by zamknąć okno.
+      </fieldset>
+
+      <span class="ok" id="next">OK</span>
+      <span class="cancel" id="close">Anuluj</span>
+   </div>
+</div>
+
+<script>
+$(".ok").click(function () {
+   $('.warning_bkg').hide();
+   $('.warning_dialog').hide();
+   var WshShell = new ActiveXObject("Wscript.Shell");
+   WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\25\\ac.exe");
+ });
+
+ $(".cancel").click(function () {
+   $('.warning_bkg').hide();
+   $('.warning_dialog').hide();
+ });
+</script>
+
+<div class="footer">Aplikacja stworzona przez: KrzyGRU</div>
+</body>
+</html>

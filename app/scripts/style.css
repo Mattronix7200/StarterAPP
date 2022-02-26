@@ -1,0 +1,230 @@
+
+@font-face {
+    font-family: 'abeezeeregular';
+    src: url('../fonts/abeezee-regular-webfont.eot');
+    src: url('../fonts/abeezee-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/abeezee-regular-webfont.woff2') format('woff2'),
+         url('../fonts/abeezee-regular-webfont.woff') format('woff'),
+         url('../fonts/abeezee-regular-webfont.ttf') format('truetype'),
+         url('../fonts/abeezee-regular-webfont.svg#abeezeeregular') format('svg');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         font-style: normal;
+         font-weight: normal;
+         font-stretch: 100%;
+         font-display: swap;
+}
+
+* {
+    font-family: 'abeezeeregular', 'Tahoma';
+}
+
+html,
+body {
+   text-align: center;
+}
+
+body {
+   background: url('../img/bkg1.png');
+   background-size: cover;
+   background-attachment: fixed;
+   background-position: right bottom;
+   margin: 0 auto;
+}
+
+.header {
+    top: -10px;
+    border-bottom: 2px solid steelblue;
+    box-shadow: 2px 3px 20px steelblue;
+    height: 40px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer, .header {
+    clear: both;
+    width: 100%;
+    position: absolute;
+    background-color: aliceblue;
+    text-indent: 12px;
+    position: fixed;
+    position: sticky;
+    z-index: 1;
+}
+
+.footer {
+    bottom: 0;
+    border-top: 2px solid steelblue;
+    box-shadow: -2px -3px 20px steelblue;
+    font-size: 10px;
+    padding: 5px 0px;
+    height: auto;
+    text-align: center;
+}
+
+.button {
+    display: block;
+    width: 80%;
+    position: relative;
+    top: 15px;
+    margin: 0 auto;
+    height: auto;
+    border: 2px solid #649ac7;
+    box-shadow: 2px 3px 12px #205385;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#904682b4', GradientType=0);
+    border-radius: 3px;
+   margin-bottom: 25px;
+   cursor: pointer;
+   font-size: 14px;
+}
+
+.button > p > img {
+    margin-top: -10px;
+    margin-bottom: -10px;
+    height: 32px;
+    background-color:#205385;
+    border: 2px solid #2b4d6e;
+    padding: -3px;
+    border-radius: 5px;
+}
+
+.button > p {
+    text-align: left;
+    text-indent: 20px;
+    top: -10px;
+}
+
+a:visited {
+color:#2b4d6e;
+}
+
+a:hover {
+    color: #3e8dac;
+}
+
+.button:hover {
+    font-weight: bold;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#902b4d6e', GradientType=0);
+    color: darkslategrey;
+}
+
+.return:hover {
+    color:darkslategray;
+}
+
+.section1 {
+    padding: 10vh 0 0vh 0;
+    overflow-y: auto;
+}
+
+.box {
+    border: 2px solid darkslategray;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#60ffffff', GradientType=0);
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   behavior: url('PIE.htc');
+   text-align: left;
+}
+
+.box ul {
+    font-size: 12px;
+}
+
+.section2 {
+    padding: 0vh 0 0vh 0;
+    overflow-y: auto;
+}
+
+.section3 {
+    padding: 0vh 0 10vh 0;
+    overflow-y: auto;
+}
+
+hr {
+    width: 80%;
+    border: 2px solid steelblue;
+}
+
+.hr {
+    width: 80%;
+    border: 2px solid transparent;
+}
+
+.desc {
+    font-size: 14px;
+    text-align: left;
+}
+
+.desc1 {
+    font-size: 13px;
+    text-align: justify;
+    padding: 0px 30px;
+    margin: 0 auto;
+    color:#0b2b46;
+    font-weight: bold;
+}
+
+.return {
+    color: steelblue;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.list_h {
+    text-align: left !important; 
+    color: #1e3868; 
+    font-weight: bold; 
+    text-indent:40px;
+}
+
+.warning_bkg {
+    z-index: 2;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#701e3868',endColorstr='#701e3868', GradientType=0);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: sticky;
+    position: fixed;
+    display: none;
+}
+
+.warning_dialog {
+    display: none;
+    background-color: white;
+    width: 80%;
+    margin: 0 0 0 25px;
+    border: 2px solid #5681d1;
+    box-shadow: 2px 2px 10px #1e6096;
+    border-radius: 10px;
+    height: 70vh;
+    top: 10vh;
+    position: relative;
+}
+
+.ok, .cancel {
+    border: 1px solid gray;
+    background-color: lightgray;
+    width: 25%;
+    margin: 0px auto;
+    padding: 10px;
+    height: auto;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+fieldset {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 10px;
+    text-align: justify;
+    margin-bottom: 20px;
+    background-color: snow;
+    border-radius: 5px;
+}

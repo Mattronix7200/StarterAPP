@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=9">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Starter Windows- menu główne</title>
+   <link rel="stylesheet" href="../scripts/style.css">
+   <HTA:APPLICATION ICON="icons/main.ico" navigable="yes" MAXIMIZEBUTTON="NO" BORDER="DIALOG" contextmenu="no">
+</head>
+
+<body>
+   <div id="dialog_bkg"></div>
+   <script src="../scripts/jquery.min.js"></script>
+   <script src='../scripts/jquery.corner.js'></script>
+   <script>
+      window.resizeTo(370, 500);
+      window.moveTo((screen.width - 370) / 2, (screen.height - 500) / 2);
+
+      window.onerror = function () {
+         return true
+      } 
+
+   </script>
+
+
+
+<div class="header">
+    <p>Kliknij na przycisk, by rozpocząć</p>
+</div>
+
+<div class="section1">
+   <p class="desc1">Witaj, jeśli zainstalowałeś system operacyjny, możesz go w łatwy sposób przygotować do pracy według własnych preferencji, używając gotowych narzędzi i szybkich skrótów dostepnych poniżej.</p>
+    <hr class="hr">
+    <div class="button" onclick="location.href = 'p1.hta';"><p><img class="icon" src="../icons/sys.png">&nbsp;Narzędzia administracyjne</p></div>
+    <div class="button" onclick="location.href = 'p2.hta';"><p><img class="icon" src="../icons/sft.png">&nbsp;Niezbędne programy</p></div>
+    <div class="button" onclick="location.href = 'p3.hta';"><p><img class="icon" src="../icons/add.png">&nbsp;Dodatkowe opcje i dodatki</p></div>
+    <div class="button" onclick="location.href = 'p4.hta';"><p><img class="icon" src="../icons/inf.png">&nbsp;O tej aplikacji...</p></div>
+</div>
+<br><br>
+<div class="footer">Aplikacja stworzona przez: KrzyGRU</div>
+</body>
+</html>

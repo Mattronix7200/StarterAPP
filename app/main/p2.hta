@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=9">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Starter Windows- niezbędnik</title>
+   <link rel="stylesheet" href="../scripts/style.css">
+   <HTA:APPLICATION ICON="icons/main.ico" navigable="yes" MAXIMIZEBUTTON="NO" BORDER="DIALOG" contextmenu="no">
+</head>
+
+<body>
+   <div id="dialog_bkg"></div>
+   <script src="../scripts/jquery.min.js"></script>
+   <script src='../scripts/jquery.corner.js'></script>
+   <script>
+      window.resizeTo(370, 500);
+      window.moveTo((screen.width - 370) / 2, (screen.height - 500) / 2);
+
+      window.onerror = function () {
+         return true
+      } 
+
+   </script>
+   
+<div class="header">
+   <a class="return" onclick="location.href = 'main.hta';"><p>&#128072; Wróć do menu głównego...</a>
+</div>
+
+
+<div class="section1">
+    <h3>Najczęściej instalowane programy</h3>
+    <p style="text-align:justify; padding: 0px 20px;">Wybierz program porpzez kliknięcie odpowiedniego przycisku poniżej, który chciałbyś ręcznie zainstalować.</p>
+    <hr>
+    <h4 class="list_h">1) Pakiety zabezpieczeń</h4>
+    <p style="text-align:left; padding: 0px 40px; font-size:14px;">Darmowe programy antywirusowe, zapory sieciowe.</p>
+    <div class="button" id="runsft_201"><p>Avast Free Antivirus</p></div>
+    <div class="button" id="runsft_202"><p>Avira Free Security</p></div>
+    <div class="button" id="runsft_203"><p>COMODO Internet Security</p></div>
+    <div class="button" id="runsft_204"><p>COMODO Firewall</p></div>
+    <div class="button" id="runsft_205"><p>Kaspersky Free Antivirus</p></div>
+    <div class="button" id="runsft_249"><p>Malwarebytes AntiMalware</p></div>
+    <div class="button" id="runsft_206"><p>Panda Free Antivirus</p></div>
+    <div class="button" id="runsft_207"><p>Sophos Home Antivirus</p></div>
+    <div class="button" id="runsft_208"><p>ZoneAlarm Firewall</p></div>
+    <div class="button" id="runsft_209"><p>ZoneAlarm Free Antivirus</p></div>
+    <hr class="hr">
+    <h4 class="list_h">2) Klient gier</h4>
+    <p style="text-align:left; padding: 0px 40px; font-size:14px;">Aplikacje do pobierania, kupowania i uruchamiania gier.</p>
+    <div class="button" id="runsft_210"><p>Epic Games Launcher</p></div>
+    <div class="button" id="runsft_211"><p>Origin</p></div>
+    <div class="button" id="runsft_212"><p>Steam</p></div>
+    <div class="button" id="runsft_213"><p>Ubisoft Connect</p></div>
+    <hr class="hr">
+    <h4 class="list_h">3) Multimedia</h4>
+    <p style="text-align:left; padding: 0px 40px; font-size:14px;">Programy do otwierania multimediów, przeglądania i edycji zdjęć oraz ich tworzenia.</p>
+    <div class="button" id="runsft_214"><p>AIMP</p></div>
+    <div class="button" id="runsft_215"><p>AudaCity</p></div>
+    <div class="button" id="runsft_216"><p>GIMP</p></div>
+    <div class="button" id="runsft_217"><p>IfranView</p></div>
+    <div class="button" id="runsft_248"><p>InkScape</p></div>
+    <div class="button" id="runsft_218"><p>OBS Studio</p></div>
+    <div class="button" id="runsft_219"><p>Paint.NET</p></div>
+    <div class="button" id="runsft_255"><p>Photoscape</p></div>
+    <div class="button" id="runsft_220"><p>VLC Media Player</p></div>
+    <hr class="hr">
+    <h4 class="list_h">4) Biuro</h4>
+    <p style="text-align:left; padding: 0px 40px; font-size:14px;">Aplikacje do przegląnia plików PDF, oraz tworzenia dokumentów, arkuszy i prezentacji.</p>
+    <div class="button" id="runsft_221"><p>Adobe Reader DC</p></div>
+    <div class="button" id="runsft_222"><p>Libre Office</p></div>
+    <div class="button" id="runsft_223"><p>SumatraPDF</p></div>
+    <div class="button" id="runsft_224"><p>Notepad++</p></div>
+    <hr class="hr">
+    <h4 class="list_h">5) Internet</h4>
+    <p style="text-align:left; padding: 0px 40px; font-size:14px;">Zestaw przeglądarek internetowych i innych narzędzi stworzonych do pracy w Internecie.</p>
+    <div class="button" id="runsft_225"><p>Brave Browser</p></div>
+    <div class="button" id="runsft_226"><p>FileZilla</p></div>
+    <div class="button" id="runsft_227"><p>Free Download Manager</p></div>
+    <div class="button" id="runsft_228"><p>Google Chrome</p></div>
+    <div class="button" id="runsft_229"><p>Microsoft Edge</p></div>
+    <div class="button" id="runsft_230"><p>Mozilla Firefox</p></div>
+    <div class="button" id="runsft_231"><p>Mozilla Thunderbird</p></div>
+    <div class="button" id="runsft_232"><p>Opera GX Browser</p></div>
+    <div class="button" id="runsft_233"><p>Opera Browser</p></div>
+    <hr class="hr">
+    <h4 class="list_h">6) Narzędzia systemowe</h4>
+    <p style="text-align:left; padding: 0px 40px; font-size:14px;">Aplikacje do zarządzania plikami, oczyszczania systemu, oraz jego optymalizacji.</p>
+    <div class="button" id="runsft_234"><p>7-ZIP</p></div>
+    <div class="button" id="runsft_235"><p>AnyBurn</p></div>
+    <div class="button" id="runsft_256"><p>AOMEI Backupper Standard</p></div>
+    <div class="button" id="runsft_236"><p>BurnAware</p></div>
+    <div class="button" id="runsft_237"><p>CCleaner</p></div>
+    <div class="button" id="runsft_238"><p>DAEMON Tools Lite</p></div>
+    <div class="button" id="runsft_239"><p>Glary Utilities</p></div>
+    <div class="button" id="runsft_240"><p>IObit Driver Booster</p></div>
+    <div class="button" id="runsft_250"><p>IObit Uninstaller</p></div>
+    <div class="button" id="runsft_252"><p>MiniTool Partition Wizard</p></div>
+    <div class="button" id="runsft_254"><p>Oracle VirtualBox</p></div>
+    <div class="button" id="runsft_251"><p>Paragon Backup & Recovery</p></div>
+    <div class="button" id="runsft_241"><p>PowerISO</p></div>
+    <div class="button" id="runsft_242"><p>Revo Uninstaller</p></div>
+    <div class="button" id="runsft_243"><p>Team Viewer</p></div>
+    <div class="button" id="runsft_244"><p>Total Commander</p></div>
+    <div class="button" id="runsft_245"><p>WinRAR</p></div>
+    <div class="button" id="runsft_246"><p>Visual Studio Code</p></div>
+    <div class="button" id="runsft_253"><p>VMWare Workstation Player</p></div>
+    <div class="button" id="runsft_247"><p>XAMPP</p></div>
+    <hr class="hr">
+    <h4 class="list_h">7) Programy redystrybucyjne</h4>
+    <p style="text-align:left; padding: 0px 40px; font-size:14px;">Biblioteki i zestaw dodatkowych łatek dla systemu, umożliwiających uruchomienie określonych programów lub gier.</p>
+    <div class="button" id="runsft_257"><p>Adobe AIR</p></div>
+    <div class="button" id="runsft_258"><p>Adobe Schockwave</p></div>
+    <div class="button" id="runsft_259"><p>J# 2.0 Runtime (x86)</p></div>
+    <div class="button" id="runsft_260"><p>J# 2.0 Runtime (x64)</p></div>
+    <div class="button" id="runsft_262"><p>Java Runtime (x86)</p></div>
+    <div class="button" id="runsft_261"><p>Java Runtime (x64)</p></div>
+    <div class="button" id="runsft_263"><p>K-Lite Codec Pack Standard</p></div>
+    <div class="button" id="runsft_264"><p>Microsoft DirectX(R)</p></div>
+    <div class="button" id="runsft_265"><p>.NET Framework 4.8 (x64/x86)</p></div>
+    <div class="button" id="runsft_267"><p>.NET Framework 6.0 (x86)</p></div>
+    <div class="button" id="runsft_266"><p>.NET Framework 6.0 (x64)</p></div>
+    <div class="button" id="runsft_268"><p>Visual C++ Redistutable (x86/x64)</p></div>
+
+</div><br><br>
+
+<script>
+   $("#runsft_201").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\av.exe");
+    });
+
+    $("#runsft_202").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\avr.exe");
+    });
+
+    $("#runsft_203").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\cs.exe");
+    });
+
+    $("#runsft_204").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\cf.exe");
+    });
+
+    $("#runsft_205").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\kf.exe");
+    });
+
+    $("#runsft_206").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\pf.exe");
+    });
+
+    $("#runsft_207").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\sh.exe");
+    });
+
+    $("#runsft_208").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\zf.exe");
+    });
+
+    $("#runsft_209").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\za.exe");
+    });
+
+    $("#runsft_210").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\ei.exe");
+    });
+
+    $("#runsft_211").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\oc.exe");
+    });
+
+    $("#runsft_212").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\ss.exe");
+    });
+
+    $("#runsft_213").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\uc.exe");
+    });
+
+    $("#runsft_214").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\ap.exe");
+    });
+
+    $("#runsft_215").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\ac.exe");
+    });
+
+    $("#runsft_216").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\gi.exe");
+    });
+
+    $("#runsft_217").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\iv.exe");
+    });
+
+    $("#runsft_248").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\is.exe");
+    });
+
+    $("#runsft_218").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\ob.exe");
+    });
+
+    $("#runsft_219").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\pn.exe");
+    });
+
+    $("#runsft_220").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\vl.exe");
+    });
+
+    $("#runsft_221").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\ar.exe");
+    });
+
+    $("#runsft_222").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\lo.exe");
+    });
+
+    $("#runsft_223").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\sp.exe");
+    });
+
+    $("#runsft_224").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\np.exe");
+    });
+
+    $("#runsft_225").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\bb.exe");
+    });
+
+    $("#runsft_226").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\fz.exe");
+    });
+
+    $("#runsft_227").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\fd.exe");
+    });
+
+    $("#runsft_228").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\ch.exe");
+    });
+
+    $("#runsft_229").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\me.exe");
+    });
+
+    $("#runsft_230").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\mf.exe");
+    });
+
+    $("#runsft_231").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\mt.exe");
+    });
+
+    $("#runsft_232").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\og.exe");
+    });
+
+    $("#runsft_233").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\oo.exe");
+    });
+
+    $("#runsft_234").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\7z.exe");
+    });
+
+    $("#runsft_235").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\ab.exe");
+    });
+
+    $("#runsft_236").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\ba.exe");
+    });
+
+    $("#runsft_237").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\cc.exe");
+    });
+
+    $("#runsft_238").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\dt.exe");
+    });
+
+    $("#runsft_239").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\gu.exe");
+    });
+
+    $("#runsft_240").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\db.exe");
+    });
+
+    $("#runsft_241").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\pi.exe");
+    });
+
+    $("#runsft_242").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\ru.exe");
+    });
+
+    $("#runsft_243").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\tv.exe");
+    });
+
+    $("#runsft_244").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\tc.exe");
+    });
+
+    $("#runsft_245").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\wr.exe");
+    });
+
+    $("#runsft_246").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\vs.exe");
+    });
+
+    $("#runsft_247").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\xp.exe");
+    });
+
+    $("#runsft_249").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\mb.exe");
+    });
+
+    $("#runsft_250").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\iu.exe");
+    });
+       
+    $("#runsft_251").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\pb.exe");
+    });
+       
+    $("#runsft_252").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\pw.exe");
+    });
+       
+    $("#runsft_253").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\vm.exe");
+    });
+       
+    $("#runsft_254").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\vb.exe");
+    });
+       
+    $("#runsft_255").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\ps.exe");
+    });
+       
+    $("#runsft_256").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\0\\aob.exe");
+    });
+       
+    $("#runsft_257").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\aa.exe");
+    });
+       
+    $("#runsft_258").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\ads.exe");
+    });
+       
+    $("#runsft_259").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\x86\\install.exe");
+    });
+       
+    $("#runsft_260").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\x64\\install.exe");
+    });
+       
+    $("#runsft_261").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\j64.exe");
+    });
+       
+    $("#runsft_262").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\j86.exe");
+    });
+       
+    $("#runsft_263").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\ks.exe");
+    });
+       
+    $("#runsft_264").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\dx.exe");
+    });
+       
+    $("#runsft_265").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\n48.exe");
+    });
+       
+    $("#runsft_266").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\n6_64.exe");
+    });
+     
+    $("#runsft_267").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\n6_86.exe");
+    });
+
+    $("#runsft_268").click(function () {
+       var WshShell = new ActiveXObject("Wscript.Shell");
+       WshShell.Run("%userprofile%\\Desktop\\Tools\\data\\bin\\26\\vcr.exe");
+    });
+
+</script>
+
+<div class="footer">Aplikacja stworzona przez: KrzyGRU</div>
+</body>
+</html>

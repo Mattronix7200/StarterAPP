@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=9">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Starter Windows- zestaw narzędzi</title>
+   <link rel="stylesheet" href="../scripts/style.css">
+   <HTA:APPLICATION ICON="icons/main.ico" navigable="yes" MAXIMIZEBUTTON="NO" BORDER="DIALOG" contextmenu="no">
+</head>
+
+<body>
+   <div id="dialog_bkg"></div>
+   <script src="../scripts/jquery.min.js"></script>
+   <script src='../scripts/jquery.corner.js'></script>
+
+   <script>
+      window.resizeTo(370, 500);
+      window.moveTo((screen.width - 370) / 2, (screen.height - 500) / 2);
+
+      window.onerror = function () {
+         return true
+      } 
+
+   </script>
+
+
+
+<div class="header">
+   <a class="return" onclick="location.href = 'main.hta';"><p>&#128072; Wróć do menu głównego...</a>
+</div>
+
+
+
+<div class="section1">
+    <h3>Narzędzia i funkcje</h3>
+        <p style="text-align:justify; padding: 0px 30px;">Wybierz program porpzez kliknięcie odpowiedniego przycisku poniżej, który chciałbyś uruchomić.</p>
+    <hr>
+    <div class="button" id="runsft_101"><p><img class="icon" src="../icons/dc.png">&nbsp;Czyszczenie dysku</p></div>
+    <div class="button" id="runsft_102"><p><img class="icon" src="../icons/dfg.ico">&nbsp;Defragmentacja dysku</p></div>
+    <div class="button" id="runsft_103"><p><img class="icon" src="../icons/dz.png">&nbsp;Dziennik zdarzeń</p></div>
+    <div class="button" id="runsft_104"><p><img class="icon" src="../icons/reg.ico">&nbsp;Edytor rejestru</p></div>
+    <div class="button" id="runsft_105"><p><img class="icon" src="../icons/gpe.png">&nbsp;Edytor zasad grupy</p></div>
+    <div class="button" id="runsft_106"><p><img class="icon" src="../icons/gpl.png">&nbsp;Edytor zasad zabezpieczeń</p></div>
+    <div class="button" id="runsft_107"><p><img class="icon" src="../icons/hz.png">&nbsp;Harmonogram zadań</p></div>
+    <div class="button" id="runsft_117"><p><img class="icon" src="../icons/inf.png">&nbsp;Informacje o systemie</p></div>
+    <div class="button" id="runsft_108"><p><img class="icon" src="../icons/dev.png">&nbsp;Menadżer urządzeń</p></div>
+    <div class="button" id="runsft_109"><p><img class="icon" src="../icons/mz.png">&nbsp;Menadżer zadań</p></div>
+    <div class="button" id="runsft_110"><p><img class="icon" src="../icons/pf.png">&nbsp;Monitor wydajności</p></div>
+    <div class="button" id="runsft_111"><p><img class="icon" src="../icons/nt.png">&nbsp;Notatnik</p></div>
+    <div class="button" id="runsft_112"><p><img class="icon" src="../icons/cpl.ico">&nbsp;Panel sterowania</p></div>
+    <div class="button" id="runsft_113"><p><img class="icon" src="../icons/cmd.png">&nbsp;Wiersz poleceń</p></div>
+    <div class="button" id="runsft_114"><p><img class="icon" src="../icons/dm.png">&nbsp;Zarządzanie dyskami</p></div>
+    <div class="button" id="runsft_115"><p><img class="icon" src="../icons/src.png">&nbsp;Zarządzanie usługami</p></div>
+    <div class="button" id="runsft_116"><p><img class="icon" src="../icons/usr.png">&nbsp;Zarządzanie użytkownikami</p></div>
+</div>
+<br><br>
+
+<script>
+$("#runsft_101").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("cleanmgr.exe");
+ });
+
+ $("#runsft_102").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("dfrgui.exe");
+ });
+
+ $("#runsft_103").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("eventvwr.msc");
+ });
+
+ $("#runsft_104").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("regedit.exe");
+ });
+
+ $("#runsft_105").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("gpedit.msc");
+ });
+
+ $("#runsft_106").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("secpol.msc");
+ });
+
+ $("#runsft_107").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("taskschd.msc");
+ });
+
+ $("#runsft_108").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("devmgmt.msc");
+ });
+
+ $("#runsft_109").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("taskmgr.exe");
+ });
+
+ $("#runsft_110").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("perfmon.msc");
+ });
+
+ $("#runsft_111").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("notepad.exe");
+ });
+
+ $("#runsft_112").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("control.exe");
+ });
+
+ $("#runsft_113").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("cmd.exe");
+ });
+
+ $("#runsft_114").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("diskmgmt.msc");
+ });
+
+ $("#runsft_115").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("services.msc");
+ });
+
+ $("#runsft_116").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("lusrmgr.msc");
+ });
+
+ $("#runsft_117").click(function () {
+    var WshShell = new ActiveXObject("Wscript.Shell");
+    WshShell.Run("msinfo32.exe");
+ });
+
+</script>
+
+<div class="footer">Aplikacja stworzona przez: KrzyGRU</div>
+</body>
+</html>
